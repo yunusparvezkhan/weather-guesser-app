@@ -29,7 +29,6 @@ class App extends React.Component {
     }
 
 
-
     render() {
 
         if (this.state.akhharekha == null && this.state.error !== null) {
