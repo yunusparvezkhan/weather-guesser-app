@@ -29,21 +29,19 @@ class App extends React.Component {
         )
     }
 
+    componentDidUpdate() {
+
+    }
+
 
     render() {
 
         if (this.state.akhharekha == null && this.state.error !== null) {
-            this.setState({ displaytext: this.state.error })
+            return <div>{this.state.msg}{this.state.error}</div>;
         } else if (this.state.error == null && this.state.akhharekha !== null) {
-            this.setState({ displaytext: this.state.akhharekha })
+            return <div>{this.state.msg}{this.state.akhharekha}</div>;
         }
 
-        return (
-            <div>
-                {/* {this.state.msg} {this.state.akhharekha} {this.state.error} */}
-                <h3>{this.state.msg}{this.state.displaytext}</h3>
-            </div >
-        )
     }
 }
 
