@@ -17,15 +17,16 @@ class App extends React.Component {
         super(props);
         this.state = { akhharekha: null, error: null, msg: null, displaytext: "loading" }
 
+    }
+
+    componentDidMount() {
+
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
                 this.setState({ msg: "latitude:", akhharekha: position.coords.latitude })
             },
             (err) => this.setState({ msg: "error:", error: err.message })
         )
-
-
-
     }
 
 
