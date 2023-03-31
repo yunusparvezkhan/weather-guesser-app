@@ -13,11 +13,7 @@ import ReactDOM from "react-dom/client";
 // }
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { akhharekha: null, error: null, msg: null, displaytext: "loading" }
-
-    }
+    state = { akhharekha: null, error: null, msg: null, displaytext: "loading" }
 
     componentDidMount() {
 
