@@ -9,7 +9,7 @@ const seasonConfig = {
     },
     winter: {
         text: "Burr, it's cold, turn on the heaters!!",
-        iconName: "snowflakes"
+        iconName: "snowflake"
     }
 }
 
