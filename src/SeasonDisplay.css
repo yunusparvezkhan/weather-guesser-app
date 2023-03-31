@@ -2,19 +2,30 @@
     display: block;
     width: 100%;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: #353535;
     justify-content: center;
     align-items: center;
 }
 
 #responce {
     position: absolute;
-    color: #353535;
+    color: #f9f9f9;
     left: 50%;
-    top: 45%;
+    top: 47%;
     transform: translate(-50%, -50%);
 }
 
 .icon {
-    font-size: 1000px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#icon1 {
+    left: 15%;
+    top: 25%;
+}
+
+#icon2 {
+    right: 10%;
+    top: 75%;
 }

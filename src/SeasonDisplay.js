@@ -5,11 +5,13 @@ import "semantic-ui-css/semantic.min.css";
 const seasonConfig = {
     summer: {
         text: "whoa, it's really hot, let's hit the beach!!",
-        iconName: "sun"
+        iconName: "sun",
+        iconColor: "red"
     },
     winter: {
         text: "Burr, it's cold, turn on the heaters!!",
-        iconName: "snowflake"
+        iconName: "snowflake",
+        iconColor: "blue"
     }
 }
 
@@ -24,13 +26,13 @@ const getSeason = (lat, month) => {
 
 const SeasonDisplay = (props) => {
     const season = getSeason(props.res, new Date().getMonth());
-    const { text, iconName } = seasonConfig[season];
+    const { text, iconName, iconColor } = seasonConfig[season];
 
     return (
         <div id="container">
-            <i className={`${iconName} icon`} />
+            <i className={`${iconName} icon massive ${iconColor}`} id="icon1" />
             <h2 id="responce">{text}</h2>
-            <i className={`${iconName} icon`} />
+            <i className={`${iconName} icon massive ${iconColor}`} id="icon2" />
         </div>
     )
 }
