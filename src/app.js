@@ -1,16 +1,6 @@
 import React from 'react'
 import ReactDOM from "react-dom/client";
 
-// const App = () => {
-//     window.navigator.geolocation.getCurrentPosition(
-//         (position) => { console.log(position) },
-//         (err) => { console.log(err) }
-//     );
-
-//     return (
-//         <div>App</div>
-//     )
-// }
 
 class App extends React.Component {
     state = { akhharekha: null, error: null, msg: null, displaytext: "loading" }
