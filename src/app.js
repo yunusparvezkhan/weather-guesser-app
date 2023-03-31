@@ -23,10 +23,10 @@ class App extends React.Component {
 
         if (this.state.akhharekha == null && this.state.error !== null) {
             // return <div>{this.state.msg}{this.state.error}</div>;
-            return <div><SeasonDisplay res={this.state.msg + this.state.error} /></div>;
+            return <div><SeasonDisplay msg={this.state.msg} res={this.state.error} /></div>;
         } else if (this.state.error == null && this.state.akhharekha !== null) {
             // return <div>{this.state.msg}{this.state.akhharekha}</div>;
-            return <div><SeasonDisplay res={this.state.msg + this.state.akhharekha} /></div>;
+            return <div><SeasonDisplay msg={this.state.msg} res={this.state.akhharekha} /></div>;
         }
 
     }

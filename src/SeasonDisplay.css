@@ -1,0 +1,16 @@
+#container {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: #353535;
+    justify-content: center;
+    align-items: center;
+}
+
+#responce {
+    position: absolute;
+    color: #f1f1f1;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+}
