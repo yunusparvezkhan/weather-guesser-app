@@ -18,8 +18,7 @@ class App extends React.Component {
     }
 
 
-    render() {
-
+    renderContent() {
         if (this.state.akhharekha == null && this.state.error !== null) {
             // return <div>{this.state.msg}{this.state.error}</div>;
             return <div><SeasonDisplay msg={this.state.msg} res={"Accounted Error: " + this.state.error} /></div>;
@@ -29,7 +28,10 @@ class App extends React.Component {
         } else if (this.state.error == null && this.state.akhharekha == null) {
             return <div><SeasonDisplay msg={this.state.msg} res={null} /></div>;
         }
+    }
 
+    render() {
+        return <div>{this.renderContent()}</div>
     }
 }
 
