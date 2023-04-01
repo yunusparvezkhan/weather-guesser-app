@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import SeasonDisplay from "./SeasonDisplay"
 
 class App extends React.Component {
-    state = { akhharekha: null, error: null, msg: null, displaytext: "loading" }
+    state = { akhharekha: null, error: null, msg: "loading" }
 
     componentDidMount() {
 
         window.navigator.geolocation.getCurrentPosition(
-            (position) => this.setState({ msg: "latitude: ", akhharekha: position.coords.latitude }),
-            (err) => this.setState({ msg: "error: ", error: err.message })
+            (position) => this.setState({ msg: "", akhharekha: position.coords.latitude }),
+            (err) => this.setState({ msg: null, error: err.message })
         );
 
     };
@@ -27,6 +27,8 @@ class App extends React.Component {
         } else if (this.state.error == null && this.state.akhharekha !== null) {
             // return <div>{this.state.msg}{this.state.akhharekha}</div>;
             return <div><SeasonDisplay msg={this.state.msg} res={this.state.akhharekha} /></div>;
+        } else if (this.state.error == null && this.state.akhharekha == null) {
+            return <div><SeasonDisplay msg={this.state.msg} res={null} /></div>;
         }
 
     }

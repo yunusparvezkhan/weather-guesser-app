@@ -27,14 +27,29 @@ const getSeason = (lat, month) => {
 const SeasonDisplay = (props) => {
     const season = getSeason(props.res, new Date().getMonth());
     const { text, iconName, iconColor } = seasonConfig[season];
-
-    return (
-        <div id="container">
-            <i className={`${iconName} icon massive ${iconColor}`} id="icon1" />
-            <h2 id="responce">{text}</h2>
-            <i className={`${iconName} icon massive ${iconColor}`} id="icon2" />
-        </div>
-    )
+    const msg = props.msg;
+    console.log(props.res)
+    if (msg == "") {
+        return (
+            <div id="container">
+                <i className={`${iconName} icon massive ${iconColor}`} id="icon1" />
+                <h2 id="responce">{msg}{text}</h2>
+                <i className={`${iconName} icon massive ${iconColor}`} id="icon2" />
+            </div>
+        )
+    } else if (msg == null) {
+        return (
+            <div id='container'>
+                <h2 id="responce">{props.res}</h2>
+            </div>
+        )
+    } else {
+        return (
+            <div id="container">
+                <h2 id="responce">Loading</h2>
+            </div>
+        )
+    }
 }
 
 export default SeasonDisplay;
