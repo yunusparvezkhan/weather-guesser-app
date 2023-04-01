@@ -29,7 +29,6 @@ const SeasonDisplay = (props) => {
     const season = getSeason(props.res, new Date().getMonth());
     const { text, iconName, iconColor } = seasonConfig[season];
     const msg = props.msg;
-    console.log(props.res)
     if (msg == "") {
         return (
             <div id="container">
