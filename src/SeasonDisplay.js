@@ -1,6 +1,7 @@
 import React from 'react';
 import "./SeasonDisplay.css";
 import "semantic-ui-css/semantic.min.css";
+import Spinner from "./spinner";
 
 const seasonConfig = {
     summer: {
@@ -45,8 +46,8 @@ const SeasonDisplay = (props) => {
         )
     } else {
         return (
-            <div id="container">
-                <h2 id="responce">Loading</h2>
+            <div id='container'>
+                <Spinner spinnerText="Please allow location permission to proceed" />
             </div>
         )
     }
